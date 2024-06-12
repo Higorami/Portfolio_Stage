@@ -25,11 +25,10 @@
     import '@splidejs/svelte-splide/css';
 
         // Carousels Ac41
-        let indexApiAc41 = 0;
+        import imageTest from '$lib/images/image_test.png';
         let imagesApiAc41 = [
-            { src: '../../../static/image_test.png', alt: 'API1'},
-            { src: '../../../static/image_test.png', alt: 'API2'},
-            { src: '../../../static/image_test.png', alt: 'API3'},
+            { src: imageTest, alt: 'API2'},
+            { src: imageTest, alt: 'API3'},
         ];
         let indexPhonelogsAc41 = 0;
         let indexCodesAc41 = 0;
@@ -75,7 +74,7 @@
             <span class="description-API">
                 Description API ac41
             </span>
-            <span class="preuves-API">
+            <span class="preuves">
                 <Splide aria-label="preuves API ac41">
                     {#each imagesApiAc41 as {src, alt}}
                         <SplideSlide>
@@ -187,6 +186,11 @@
 
 .onglet-not-displayed{
     display: none;
+}
+
+.preuves{
+    max-width: fit-content;
+    justify-content: center;
 }
 
 </style>
