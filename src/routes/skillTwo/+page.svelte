@@ -163,7 +163,7 @@
         </div>
         <div class="contenu">
             <span class="description left">
-                J'ai été amené à concevoir deux tables que j'ai du inclure dans la base de donnée existante de Dolibarr. La première était une table regroupant les journaux téléphoniques et qui contient donc les informations de l'appelant comme son numéro de téléphone mais également les caractéristiques de l'appel comme la durée de celui-ci. La seconde table à été conçu pour stocker des listes d'id de contacts et tiers générées lors de la recherche via l'API et étant affichées dans une page web que j'ai crée.
+                Dolibarr possédait déjà une base de données donc j’ai simplement créé et ajouté les tables nécessaires aux différentes fonctionnalités du module. Cela inclut une table pour stocker les journaux téléphoniques, une table pour les listes de contacts/tiers utilisés dans la recherche de 3CX, et deux tables pour stocker les codes téléphoniques respectivement des tiers et des contacts.
             </span>
             <span class="preuves right">
                 <Splide aria-label="preuves Phonelogs ac43">
