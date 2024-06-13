@@ -80,11 +80,11 @@
     </div>
     <div class="onglet {btns[0] ? 'onglet-displayed' : 'onglet-not-displayed'}">
         <div class="sous-titre">
-            <h2>Élaborer et implémenter les spécifications fonctionnelles et non fonctionnelles à partir des exigences</h2> + api + page corresp contact
+            <h2>Élaborer et implémenter les spécifications fonctionnelles et non fonctionnelles à partir des exigences</h2>
         </div>
         <div class="contenu">
             <span class="description left">
-                Lors de mon stage de deuxième année de BUT informatique j'ai dû créer une API. Celle-ci interroge et met à jour une base de donnée mySQL qui était déjà existante et qui contient certaines tables que j'ai ajouté.
+                <p>Lors de mon stage j’ai réalisé d’A à Z un module qui devait permettre de mettre en lien la solution de téléphonie 3CX et le CRM Dolibarr. J’ai implémenté cela grâce à un fichier XML faisant le lien entre 3CX et l’API que j’ai développé. Cela conduit à ouvrir automatiquement la fiche Dolibarr correspondant au contact ou tiers appelant.</p>
             </span>
             <span class="preuves right">
                 <Splide aria-label="preuves Implémentation ac11">
@@ -99,7 +99,7 @@
     </div>
     <div class="onglet {btns[1] ? 'onglet-displayed' : 'onglet-not-displayed'}">
         <div class="sous-titre">
-            <h2>Appliquer des principes d'accessibilité et d'ergonomie</h2> + liste
+            <h2>Appliquer des principes d'accessibilité et d'ergonomie</h2>
         </div>
         <div class="contenu">
             <span class="preuves left">
@@ -112,7 +112,7 @@
                 </Splide>
             </span>
             <span class="description right">
-                J'ai également été amené à créer une page web pour la gestion et la visualisation des codes téléphoniques.
+                Dans la création de ce module je me suis efforcé de respecter le style natif de Dolibarr, soit en l’imitant complètement soit en m’en inspirant afin que l’utilisateur ne soit pas désorienté en l’utilisant. J’ai également essayé de le rendre le plus intuitif possible grâce à des libellés clairs. J’ai également été amené à ajouter des retours visuels aux actions des utilisateurs.
             </span>
         </div>
     </div>
@@ -122,7 +122,7 @@
         </div>
         <div class="contenu">
             <span class="description left">
-                J'ai été amené à concevoir deux tables que j'ai du inclure dans la base de donnée existante de Dolibarr. La première était une table regroupant les journaux téléphoniques et qui contient donc les informations de l'appelant comme son numéro de téléphone mais également les caractéristiques de l'appel comme la durée de celui-ci. La seconde table à été conçu pour stocker des listes d'id de contacts et tiers générées lors de la recherche via l'API et étant affichées dans une page web que j'ai crée.
+                J’ai veillé à inclure suffisamment de commentaires précis tout au long de la rédaction du code du module pour le rendre compréhensible. J’ai également écrit une documentation complète décrivant le fonctionnement et l’arborescence du module. Cela permet une récupération bien plus aisée de la part d’un autre développeur ce qui est très important surtout dans le cadre d’un stage (donc une place temporaire dans l’entreprise).
             </span>
             <span class="preuves right">
                 <Splide aria-label="preuves Documentation ac13">
@@ -225,7 +225,7 @@
     height: fit-content;
     border: 5px solid rgb(46, 24, 3);
     border-radius: 10px;
-    background-color: aliceblue;
+    background-color: rgb(46, 24, 3);
 }
 
 .preuves img{

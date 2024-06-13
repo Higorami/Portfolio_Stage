@@ -266,7 +266,7 @@
     height: fit-content;
     border: 5px solid rgb(46, 24, 3);
     border-radius: 10px;
-    background-color: aliceblue;
+    background-color: rgb(46, 24, 3);
 }
 
 .preuves img{
