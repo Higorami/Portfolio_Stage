@@ -17,7 +17,7 @@
 		</svg>
 		<ul>
 			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-				<a href="/">Home</a>
+				<a href="/">Accueil</a>
 			</li>
 			<li aria-current={$page.url.pathname === '/skillOne' ? 'page' : undefined}>
 				<a href="/skillOne">Compétence 1.2</a>

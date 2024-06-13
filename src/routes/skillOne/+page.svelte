@@ -34,10 +34,6 @@
             { src: imageAc41API1, alt: 'image API du swagger 1'},
             { src: imageAc41API2, alt: 'image API du swagger 2'},
         ];
-        let imagesPhonelogsCodesAc41 = [
-            { src: imageAc41Phonelogs, alt: 'image swagger journaux téléphoniques'},
-            { src: imageAc41Codes, alt: 'image edit codes téléphoniques'},
-        ];
 
         // Carousels Ac12
         import imageAc42Phonelogs1 from '$lib/images/ac42/ac42_Phonelogs1.png';
@@ -52,21 +48,14 @@
             { src: imageAc42Phonelogs3, alt: 'image liste journaux téléphoniques 3'},
             { src: imageAc42Phonelogs4, alt: 'image liste journaux téléphoniques 4'},
         ];
-        let imagesCodesAc42 = [
-            { src: imageAc42Codes, alt: 'image liste codes téléphoniques'},
-        ];
 
         // Carousels Ac13
-        import imageAc43Phonelogs from '$lib/images/ac43/ac43_Phonelogs.png';
-        import imageAc43Contacts from '$lib/images/ac43/ac43_Contacts.png';
-        import imageAc43CodesTiers from '$lib/images/ac43/ac43_Codes_tiers.png';
-        import imageAc43CodesContact from '$lib/images/ac43/ac43_Codes_contact.png';
+        import imageAc13Comms from '$lib/images/ac13/ac13_Commentaires.png';
+        import imageAc13Docs from '$lib/images/ac13/ac13_doc.png';
 
-        let imagesBDDAc43 = [
-            { src: imageAc43Phonelogs, alt: 'image BDD journaux téléphoniques'},
-            { src: imageAc43Contacts, alt: 'image BDD contacts'},
-            { src: imageAc43CodesTiers, alt: 'image BDD codes tiers'},
-            { src: imageAc43CodesContact, alt: 'image BDD codes contact'},
+        let imagesDocAc13 = [
+            { src: imageAc13Comms, alt: 'image commentaires code module'},
+            { src: imageAc13Docs, alt: 'image doc module'},
         ];
 
 </script>
@@ -92,7 +81,7 @@
     </div>
     <div class="onglet {btns[0] ? 'onglet-displayed' : 'onglet-not-displayed'}">
         <div class="sous-titre">
-            <h2>Mettre à jour et interroger une base de donnée relationnelle (en requêtes directes ou à travers une application)</h2>
+            <h2>Élaborer et implémenter les spécifications fonctionnelles et non fonctionnelles à partir des exigences</h2> + api
         </div>
         <div class="contenu">
             <span class="description left">
@@ -108,44 +97,15 @@
                 </Splide>
             </span>
         </div>
-        <div class="contenu">
-            <span class="preuves left">
-                <Splide aria-label="preuves Phonelogs ac41">
-                    {#each imagesPhonelogsCodesAc41 as {src, alt}}
-                        <SplideSlide>
-                            <img src="{src}" alt="{alt}"/>
-                        </SplideSlide>
-                    {/each}
-                </Splide>
-            </span>
-            <span class="description right">
-                J'ai également été amené à créer et gérer des journaux téléphoniques que je stockait dans une table de cette base de donnée que j'interrogeait lors de leurs utilisations (essentiellement de l'affichage avec plus ou moins de filtres).
-                Je n'ai pas seulement créer et géré des journaux téléphoniques mais aussi des codes téléphoniques qui peuvent être gérés dans une page web que j'ai crée et qui permet de les créer, modifier, supprimer. Ces codes étaient utilisés pour des vérifications d'accès à la ligne d'urgence.
-            </span>
-        </div>
     </div>
     <div class="onglet {btns[1] ? 'onglet-displayed' : 'onglet-not-displayed'}">
         <div class="sous-titre">
-            <h2>Visualiser des données</h2>
-        </div>
-        <div class="contenu">
-            <span class="description left">
-                Dans la gestion des Journaux téléphoniques j'ai été amené à les visualiser sous forme de différentes listes dans des pages web que j'ai crées.
-            </span>
-            <span class="preuves right">
-                <Splide aria-label="preuves Phonelogs ac42">
-                    {#each imagesPhonelogsAc42 as {src, alt}}
-                        <SplideSlide>
-                            <img src="{src}" alt="{alt}"/>
-                        </SplideSlide>
-                    {/each}
-                </Splide>
-            </span>
+            <h2>Appliquer des principes d'accessibilité et d'ergonomie</h2> + liste
         </div>
         <div class="contenu">
             <span class="preuves left">
                 <Splide aria-label="preuves Codes ac42">
-                    {#each imagesCodesAc42 as {src, alt}}
+                    {#each imagesPhonelogsAc42 as {src, alt}}
                         <SplideSlide>
                             <img src="{src}" alt="{alt}"/>
                         </SplideSlide>
@@ -159,7 +119,7 @@
     </div>
     <div class="onglet {btns[2] ? 'onglet-displayed' : 'onglet-not-displayed'}">
         <div class="sous-titre">
-            <h2>Concevoir une base de données relationnelle à partir d'un cahier des charges</h2>
+            <h2>Adopter de bonnes pratiques de conception et de programmation</h2>
         </div>
         <div class="contenu">
             <span class="description left">
@@ -167,7 +127,7 @@
             </span>
             <span class="preuves right">
                 <Splide aria-label="preuves Phonelogs ac43">
-                    {#each imagesBDDAc43 as {src, alt}}
+                    {#each imagesDocAc13 as {src, alt}}
                         <SplideSlide>
                             <img src="{src}" alt="{alt}"/>
                         </SplideSlide>
