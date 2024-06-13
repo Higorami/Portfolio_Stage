@@ -24,7 +24,6 @@
     import { Splide, SplideSlide } from '@splidejs/svelte-splide';
     import '@splidejs/svelte-splide/css';
 
-        import imageTest from '$lib/images/image_test.png';
         // Carousels Ac41
         import imageAc41API1 from '$lib/images/ac41/ac41_API.png';
         import imageAc41API2 from '$lib/images/ac41/ac41_API2.png';
@@ -81,15 +80,15 @@
         <button 
             class="btn-sous-nav {btns[0] ? 'btn-sous-nav-clicked' : ''}"
             on:click={() => changeBtn(0)}
-        >Apprentissage Critique 4.1</button>
+        >Apprentissage Critique 1</button>
         <button 
             class="btn-sous-nav {btns[1] ? 'btn-sous-nav-clicked' : ''}"
             on:click={() => changeBtn(1)}
-        >Apprentissage Critique 4.2</button>
+        >Apprentissage Critique 2</button>
         <button 
             class="btn-sous-nav {btns[2] ? 'btn-sous-nav-clicked' : ''}"
             on:click={() => changeBtn(2)}
-        >Apprentissage Critique 4.3</button>
+        >Apprentissage Critique 3</button>
     </div>
     <div class="onglet {btns[0] ? 'onglet-displayed' : 'onglet-not-displayed'}">
         <div class="sous-titre">
