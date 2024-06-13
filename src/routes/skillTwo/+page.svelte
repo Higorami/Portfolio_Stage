@@ -261,14 +261,13 @@
 
 .preuves{
     width: 100%;
+    border: 5px solid rgb(46, 24, 3);
+    border-radius: 10px;
 }
 
 .preuves img{
     width: 100%;
-    min-width: fit-content;
     height: auto;
-    border: 5px solid rgb(46, 24, 3);
-    border-radius: 10px;
 }
 
 .description{
@@ -280,14 +279,14 @@
 }
 
 .right{
-    width: 45vw;
+    width: 42vw;
     margin-right: 3vw;
     margin-left: auto;
     margin-bottom: 7vh;
 }
 
 .left{
-    width: 45vw;
+    width: 42vw;
     margin-left: 3vw;
     margin-right: auto;
     margin-bottom: 7vh;
