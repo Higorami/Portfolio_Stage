@@ -35,7 +35,6 @@
             { src: imageAc41API2, alt: 'image API du swagger 2'},
         ];
         let imagesPhonelogsCodesAc41 = [
-            { src: imageAc41Phonelogs, alt: 'image swagger journaux téléphoniques'},
             { src: imageAc41Codes, alt: 'image edit codes téléphoniques'},
         ];
 
@@ -51,8 +50,6 @@
             { src: imageAc42Phonelogs2, alt: 'image liste journaux téléphoniques 2'},
             { src: imageAc42Phonelogs3, alt: 'image liste journaux téléphoniques 3'},
             { src: imageAc42Phonelogs4, alt: 'image liste journaux téléphoniques 4'},
-        ];
-        let imagesCodesAc42 = [
             { src: imageAc42Codes, alt: 'image liste codes téléphoniques'},
         ];
 
@@ -96,7 +93,7 @@
         </div>
         <div class="contenu">
             <span class="description left">
-                Lors de mon stage de deuxième année de BUT informatique j'ai dû créer une API. Celle-ci interroge et met à jour une base de donnée mySQL qui était déjà existante et qui contient certaines tables que j'ai ajouté.
+                Lors de mon stage j’ai été amené à créer une API me permettant d’interagir avec la base de données de Dolibarr et ainsi interagir et mettre à jour les données des différentes tables de cette dernière aussi bien celles qui étaient déjà présentes que celles que j’ai ajoutées pour les besoins du module.
             </span>
             <span class="preuves right">
                 <Splide aria-label="preuves API ac41">
@@ -119,8 +116,7 @@
                 </Splide>
             </span>
             <span class="description right">
-                J'ai également été amené à créer et gérer des journaux téléphoniques que je stockait dans une table de cette base de donnée que j'interrogeait lors de leurs utilisations (essentiellement de l'affichage avec plus ou moins de filtres).
-                Je n'ai pas seulement créer et géré des journaux téléphoniques mais aussi des codes téléphoniques qui peuvent être gérés dans une page web que j'ai crée et qui permet de les créer, modifier, supprimer. Ces codes étaient utilisés pour des vérifications d'accès à la ligne d'urgence.
+                Mais je n’ai pas été confronté à la base de données seulement lors du développement de l’API mais bien de l’entièreté du module. En effet j’ai en permanence manipulée différentes données dans chacune des fonctionnalités. La plus notable dans ce cas est celle de la gestion des codes téléphoniques qui sous la forme d’une page web permet aussi bien de générer aléatoirement un code unique, que d’en créer un au choix ou bien encore d’en modifier ou supprimer un.
             </span>
         </div>
     </div>
@@ -129,10 +125,7 @@
             <h2>Visualiser des données</h2>
         </div>
         <div class="contenu">
-            <span class="description left">
-                Dans la gestion des Journaux téléphoniques j'ai été amené à les visualiser sous forme de différentes listes dans des pages web que j'ai crées.
-            </span>
-            <span class="preuves right">
+            <span class="preuves left">
                 <Splide aria-label="preuves Phonelogs ac42">
                     {#each imagesPhonelogsAc42 as {src, alt}}
                         <SplideSlide>
@@ -141,19 +134,8 @@
                     {/each}
                 </Splide>
             </span>
-        </div>
-        <div class="contenu">
-            <span class="preuves left">
-                <Splide aria-label="preuves Codes ac42">
-                    {#each imagesCodesAc42 as {src, alt}}
-                        <SplideSlide>
-                            <img src="{src}" alt="{alt}"/>
-                        </SplideSlide>
-                    {/each}
-                </Splide>
-            </span>
             <span class="description right">
-                J'ai également été amené à créer une page web pour la gestion et la visualisation des codes téléphoniques.
+                J’ai implémenté dans le module que j’ai développé plusieurs pages web permettant de visualiser diverses données. Cette visualisation pouvait se faire sous la forme de liste avec différents filtrages, c’était le cas pour les journaux téléphoniques, ou encore d’une forme plus spécifique comme celle des codes téléphoniques qui sont une succession de formulaires indépendants liés au contact ou tiers sélectionné.
             </span>
         </div>
     </div>
