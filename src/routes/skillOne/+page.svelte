@@ -25,28 +25,27 @@
     import '@splidejs/svelte-splide/css';
 
         // Carousels Ac11
+        import imageAc11XML from '$lib/images/ac11/ac11_xml.png';
         import imageAc41API1 from '$lib/images/ac41/ac41_API.png';
         import imageAc41API2 from '$lib/images/ac41/ac41_API2.png';
-        import imageAc41Phonelogs from '$lib/images/ac41/ac41_Phonelogs.png';
-        import imageAc41Codes from '$lib/images/ac41/ac41_Codes.png';
+        import imageAc11Fiche from '$lib/images/ac11/ac11_fiche.png';
 
         let imagesApiAc41 = [
+            { src: imageAc11XML, alt: 'image xml'},
             { src: imageAc41API1, alt: 'image API du swagger 1'},
             { src: imageAc41API2, alt: 'image API du swagger 2'},
+            { src: imageAc11Fiche, alt: 'image fiche'},
         ];
 
         // Carousels Ac12
-        import imageAc42Phonelogs1 from '$lib/images/ac42/ac42_Phonelogs1.png';
-        import imageAc42Phonelogs2 from '$lib/images/ac42/ac42_Phonelogs2.png';
+        import imageAc12Alert1 from '$lib/images/ac12/ac12_alert1.png';
+        import imageAc12Alert2 from '$lib/images/ac12/ac12_alert2.png';
         import imageAc42Phonelogs3 from '$lib/images/ac42/ac42_Phonelogs3.png';
-        import imageAc42Phonelogs4 from '$lib/images/ac42/ac42_Phonelogs4.png';
-        import imageAc42Codes from '$lib/images/ac42/ac42_Codes.png';
 
-        let imagesPhonelogsAc42 = [
-            { src: imageAc42Phonelogs1, alt: 'image liste journaux téléphoniques 1'},
-            { src: imageAc42Phonelogs2, alt: 'image liste journaux téléphoniques 2'},
+        let imagesErgoAc12 = [
+            { src: imageAc12Alert1, alt: 'image alert code 1'},
+            { src: imageAc12Alert2, alt: 'image alert code 2'},
             { src: imageAc42Phonelogs3, alt: 'image liste journaux téléphoniques 3'},
-            { src: imageAc42Phonelogs4, alt: 'image liste journaux téléphoniques 4'},
         ];
 
         // Carousels Ac13
@@ -81,14 +80,14 @@
     </div>
     <div class="onglet {btns[0] ? 'onglet-displayed' : 'onglet-not-displayed'}">
         <div class="sous-titre">
-            <h2>Élaborer et implémenter les spécifications fonctionnelles et non fonctionnelles à partir des exigences</h2> + api
+            <h2>Élaborer et implémenter les spécifications fonctionnelles et non fonctionnelles à partir des exigences</h2> + api + page corresp contact
         </div>
         <div class="contenu">
             <span class="description left">
                 Lors de mon stage de deuxième année de BUT informatique j'ai dû créer une API. Celle-ci interroge et met à jour une base de donnée mySQL qui était déjà existante et qui contient certaines tables que j'ai ajouté.
             </span>
             <span class="preuves right">
-                <Splide aria-label="preuves API ac41">
+                <Splide aria-label="preuves Implémentation ac11">
                     {#each imagesApiAc41 as {src, alt}}
                         <SplideSlide>
                             <img src="{src}" alt="{alt}"/>
@@ -104,8 +103,8 @@
         </div>
         <div class="contenu">
             <span class="preuves left">
-                <Splide aria-label="preuves Codes ac42">
-                    {#each imagesPhonelogsAc42 as {src, alt}}
+                <Splide aria-label="preuves Ergonomie ac12">
+                    {#each imagesErgoAc12 as {src, alt}}
                         <SplideSlide>
                             <img src="{src}" alt="{alt}"/>
                         </SplideSlide>
@@ -126,7 +125,7 @@
                 J'ai été amené à concevoir deux tables que j'ai du inclure dans la base de donnée existante de Dolibarr. La première était une table regroupant les journaux téléphoniques et qui contient donc les informations de l'appelant comme son numéro de téléphone mais également les caractéristiques de l'appel comme la durée de celui-ci. La seconde table à été conçu pour stocker des listes d'id de contacts et tiers générées lors de la recherche via l'API et étant affichées dans une page web que j'ai crée.
             </span>
             <span class="preuves right">
-                <Splide aria-label="preuves Phonelogs ac43">
+                <Splide aria-label="preuves Documentation ac13">
                     {#each imagesDocAc13 as {src, alt}}
                         <SplideSlide>
                             <img src="{src}" alt="{alt}"/>
