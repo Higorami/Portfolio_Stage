@@ -19,50 +19,37 @@
         }
     }
 
-    // carousels
-
-    import { Splide, SplideSlide } from '@splidejs/svelte-splide';
-    import '@splidejs/svelte-splide/css';
-
         // Carousels Ac11
-        import imageAc11XML from '$lib/images/ac11/ac11_xml.png';
-        import imageAc41API1 from '$lib/images/ac41/ac41_API.png';
-        import imageAc41API2 from '$lib/images/ac41/ac41_API2.png';
-        import imageAc11Fiche from '$lib/images/ac11/ac11_fiche.png';
+        import imageAc11ARI from '$lib/images/ac11/controleurARI.png';
 
-        let imagesApiAc41 = [
-            { src: imageAc11XML, alt: 'image xml'},
-            { src: imageAc41API1, alt: 'image API du swagger 1'},
-            { src: imageAc41API2, alt: 'image API du swagger 2'},
-            { src: imageAc11Fiche, alt: 'image fiche'},
+        let imagesAc41 = [
+            { src: imageAc11ARI, alt: 'Figure I - Contrôleur ARI'},
         ];
 
         // Carousels Ac12
-        import imageAc12Alert1 from '$lib/images/ac12/ac12_alert1.png';
-        import imageAc12Alert2 from '$lib/images/ac12/ac12_alert2.png';
-        import imageAc42Phonelogs3 from '$lib/images/ac42/ac42_Phonelogs3.png';
+        import imageAc12StatsBefore from '$lib/images/ac12/stats_before.png';
+        import imageAc12StatsAfter from '$lib/images/ac12/stats_after.png';
 
-        let imagesErgoAc12 = [
-            { src: imageAc12Alert1, alt: 'image alert code 1'},
-            { src: imageAc12Alert2, alt: 'image alert code 2'},
-            { src: imageAc42Phonelogs3, alt: 'image liste journaux téléphoniques 3'},
+        let imagesAc12 = [
+            { src: imageAc11ARI, alt: 'Figure I - Contrôleur ARI'},
+            { src: imageAc12StatsBefore, alt: 'Figure II - Statistiques avant amélioration'},
+            { src: imageAc12StatsAfter, alt: 'Figure III - Statistiques après amélioration'},
         ];
 
         // Carousels Ac13
-        import imageAc13Comms from '$lib/images/ac13/ac13_Commentaires.png';
-        import imageAc13Docs from '$lib/images/ac13/ac13_doc.png';
+        import imageAc13Diagramme from '$lib/images/ac13/diagramme_environnement_prod.png';
 
-        let imagesDocAc13 = [
-            { src: imageAc13Comms, alt: 'image commentaires code module'},
-            { src: imageAc13Docs, alt: 'image doc module'},
+        let imagesAc13 = [
+            { src: imageAc13Diagramme, alt: 'Figure IV - Diagramme de l’environnement de production'},
         ];
 
 </script>
 
 <div class="all">
     <div class="box-titre">
-        <h1>Compétence 1 niveau 2</h1>
-        <h2>Partir des exigences et aller jusqu'à une application complète</h2>
+        <h1>Compétence 1 niveau 3</h1>
+        <h2>Adapter des applications sur un ensemble de supports</h2>
+        <h3>Cette compétence sera essentiellement illustrée par le travail que j'ai réalisé lors de mon stage de 16 semaines dans l'entreprise Isara Technologies. Ma tâche principale au cours de ce stage étant l'amélioration de l'application web à destination des pompiers HORUS.</h3>
     </div>
     <div class="sous-nav">
         <button 
@@ -80,58 +67,54 @@
     </div>
     <div class="onglet {btns[0] ? 'onglet-displayed' : 'onglet-not-displayed'}">
         <div class="sous-titre">
-            <h2>Élaborer et implémenter les spécifications fonctionnelles et non fonctionnelles à partir des exigences</h2>
+            <h2>Choisir et implémenter les architectures adaptées</h2>
         </div>
         <div class="contenu">
             <span class="description left">
-                <p>Lors de mon stage j’ai réalisé d’A à Z un module qui devait permettre de mettre en lien la solution de téléphonie 3CX et le CRM Dolibarr. J’ai implémenté cela grâce à un fichier XML faisant le lien entre 3CX et l’API que j’ai développé. Cela conduit à ouvrir automatiquement la fiche Dolibarr correspondant au contact ou tiers appelant.</p>
+                <p>L’application HORUS a été conçue dans le but d’aider les équipes départementales de pompiers dans leur quotidien. Pour cela elle leur permet de consulter de nombreuses informations de façon claire et concise pour les aider dans leurs prises de décisions, des statistiques et des prédictions par IA sont aussi disponible dans ce but, ainsi que de nombreux outils permettant de faciliter leur quotidien comme le contrôleur ARI (Appareil Respiratoire Isolant) apparaissant sur la figure I et permettant le suivi des pompiers au sein d’un bâtiment en feu.</p>
+                <p>Comme vous pouvez l'imaginer, les pompiers utilisent donc cette application sur divers supports, que ce soit sur un ordinateur dans leurs bureaux, sur un téléphone lors des interventions ou sur une tablette pour le contrôleur ARI. J’ai donc dû adapter chacun de mes ajouts à leur usage majoritaire tout en m’assurant qu’ils fonctionnaient sur tous les supports possibles.</p>
+                <p>Dans ce but il à donc fallu que j’adapte le style de l’application via une variable vérifiant le support de l’utilisateur, mais également que je m’adapte au navigateur de celui-ci. Ceux-ci ne disposant pas toujours des mêmes fonctionnalités, il a fallu que j’adapte parfois mes implémentations en conséquence comme lors du développement de la fonctionnalité de capture d’écran qui ne fonctionnait mal avec les navigateurs Firefox et Safari.</p>
             </span>
             <span class="preuves right">
-                <Splide aria-label="preuves Implémentation ac11">
-                    {#each imagesApiAc41 as {src, alt}}
-                        <SplideSlide>
-                            <img src="{src}" alt="{alt}"/>
-                        </SplideSlide>
-                    {/each}
-                </Splide>
+                {#each imagesAc41 as {src, alt}}
+                    <img src="{src}" alt="{alt}"/>
+                    <p>{alt}</p>
+                {/each}
             </span>
         </div>
     </div>
     <div class="onglet {btns[1] ? 'onglet-displayed' : 'onglet-not-displayed'}">
         <div class="sous-titre">
-            <h2>Appliquer des principes d'accessibilité et d'ergonomie</h2>
+            <h2>Faire évoluer une application existante</h2>
         </div>
         <div class="contenu">
             <span class="preuves left">
-                <Splide aria-label="preuves Ergonomie ac12">
-                    {#each imagesErgoAc12 as {src, alt}}
-                        <SplideSlide>
-                            <img src="{src}" alt="{alt}"/>
-                        </SplideSlide>
-                    {/each}
-                </Splide>
+                {#each imagesAc12 as {src, alt}}
+                    <img src="{src}" alt="{alt}"/>
+                    <p>{alt}</p>
+                {/each}
             </span>
             <span class="description right">
-                Dans la création de ce module je me suis efforcé de respecter le style natif de Dolibarr, soit en l’imitant complètement soit en m’en inspirant afin que l’utilisateur ne soit pas désorienté en l’utilisant. J’ai également essayé de le rendre le plus intuitif possible grâce à des libellés clairs. J’ai également été amené à ajouter des retours visuels aux actions des utilisateurs.
+                <p>L’application HORUS est en production et donc dans un état fonctionnel depuis 2022. Ayant rejoint le développement en 2025 j’ai été amené à faire évoluer une application existante. Dans ce cadre j’ai apporté trois types d’évolutions, l’ajout de fonctionnalités et la modification de fonctionnalités existantes que j’aborderai ensuite, ainsi que la correction de bugs diverses de manière plus succincte.</p>
+                <p>Pour la partie sur l’ajout d’une fonctionnalité je vais prendre la page du contrôleur ARI comme exemple, celle-ci est visible sur la figure I. Pour la réalisation de cette page je suis passé par deux étapes. Tout d’abord pour la partie conception j’ai commencé par récolter le besoin utilisateur. Une fois toutes les informations essentielles récupérées j’ai pu dessiner une maquette sur papier en m’inspirant de solutions existantes. Après validation de mon maître de stage j’ai commencé l’implémentation, pour ce faire j’ai commencé par un placement rapide des éléments majeurs puis par la création de toute la logique. J’ai pu ajouter un compteur, un calcul de l’heure de sortie, un calcul de l’oxygène restant en fonction des paramètres de l’utilisateur, etc…. Pour les finitions du style de la page j’ai dû veiller à respecter l’esthétique globale de l’application déjà existante.</p>
+                <p>Pour la partie sur l’amélioration d’une fonctionnalité déjà existante j’ai choisi comme exemple la page des statistiques. Avant mes modifications les informations étaient simplement affichées de manière textuelle (voir figure II). Il à donc fallu que j’adapte chacune des données sous forme du graphique le plus adapté afin que l’utilisateur puisse les comprendre de la manière la plus intuitive et rapide possible à l’aide le la bibliothèque AGCharts. J’ai donc dû apprendre cette bibliothèque avant de pouvoir implémenter chaque graphique avec les données associées (voir figure III).</p>
             </span>
         </div>
     </div>
     <div class="onglet {btns[2] ? 'onglet-displayed' : 'onglet-not-displayed'}">
         <div class="sous-titre">
-            <h2>Adopter de bonnes pratiques de conception et de programmation</h2>
+            <h2>Intégrer des solutions dans un environnement de production</h2>
         </div>
         <div class="contenu">
             <span class="description left">
-                J’ai veillé à inclure suffisamment de commentaires précis tout au long de la rédaction du code du module pour le rendre compréhensible. J’ai également écrit une documentation complète décrivant le fonctionnement et l’arborescence du module. Cela permet une récupération bien plus aisée de la part d’un autre développeur ce qui est très important surtout dans le cadre d’un stage (donc une place temporaire dans l’entreprise).
+                <p>L’application HORUS étant déjà en production, il était nécessaire de prendre toutes les précautions avant de faire le moindre changement pour éviter d’impacter les utilisateurs. Dans cette optique, j'ai donc dû suivre une procédure rigoureuse lors de mon travail.</p>
+                <p>Cette procédure commençait par le travail personnel normal d’un développeur consistant à mener des tests sur les ajouts que j’apportais au code. Le reste de cette procédure se faisait en concordance avec le cycle du projet dont le diagramme est visible sur la figure IV. À chaque nouvelle nouvelle fonctionnalité je commençais par créer une nouvelle branche sur le repository github du projet, avec des commit régulier pour éviter les pertes, je travaillais uniquement sur cette branche jusqu’à ce que la fonctionnalité soit entièrement finie. À ce moment-là je lançais une pull request, une fois mon code revu par mon maître de stage, ma branche était fusionnée à la branche principale du projet. Tout le développement se passe sur le serveur de développement qui est différencié du serveur de production. Après quelques tests et lorsque le serveur de développement est stabilisé, le code de celui-ci est envoyé vers le serveur de production pour le mettre à jour.</p>
             </span>
             <span class="preuves right">
-                <Splide aria-label="preuves Documentation ac13">
-                    {#each imagesDocAc13 as {src, alt}}
-                        <SplideSlide>
-                            <img src="{src}" alt="{alt}"/>
-                        </SplideSlide>
-                    {/each}
-                </Splide>
+                {#each imagesAc13 as {src, alt}}
+                    <img src="{src}" alt="{alt}"/>
+                    <p>{alt}</p>
+                {/each}
             </span>
         </div>
     </div>
@@ -162,9 +145,21 @@
     margin: auto;
 }
 
+.box-titre h3{
+    font-size: 1.2em;
+    color: rgb(97, 97, 97);
+    text-align: center;
+    width: 40vw;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
 .sous-nav{
     display: flex;
     max-width: fit-content;
+    width: 80vw;
+    margin: 0 auto;
 }
 
 .btn-sous-nav{
@@ -175,23 +170,35 @@
     background-color: rgb(68, 67, 67);
     color: orange;
     border: 2px solid goldenrod;
-    border-left: none;
 }
 
-.btn-sous-nav:hover{
+.btn-sous-nav:hover {
     background-color: grey;
     color: gold;
     transition: 0.2s;
 }
 
 .btn-sous-nav-clicked{
-    background-color: grey;
+    background-color: rgba(128, 128, 128, 0.8);
     color: gold;
     border-bottom: none;
 }
 
 .onglet{
-    background-color: grey;
+    background-image: linear-gradient(to bottom, rgba(128, 128, 128, 0.8), rgba(128, 128, 128, 0.8)), url('$lib/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    padding: 2rem;
+    margin: 0 auto;
+    width: 80vw;
+    border-radius: 10px;
+    margin-bottom: 5vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    display: none;
+    position: relative;
+    overflow: hidden;   
 }
 
 .onglet-displayed{
@@ -208,24 +215,22 @@
     display: flex;
     padding-top: 5vh;
     padding-bottom: 8vh;
-    padding-left: 25vw;
-    padding-right: 25vw;
+    margin: 0 auto;
 }
 
 .sous-titre h2{
     margin: auto;
-    font-size: 4em;
+    font-size: 3em;
     color: orange;
-    filter: drop-shadow(0px 0px 3px rgb(255, 196, 0));
     text-align: center;
+    width: 100%;
+    padding: 1rem;
 }
 
 .preuves{
-    width: 50vw;
+    width: 40vw;
     height: fit-content;
-    border: 5px solid rgb(46, 24, 3);
-    border-radius: 10px;
-    background-color: rgb(46, 24, 3);
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .preuves img{
@@ -235,19 +240,29 @@
     border-radius: 6px;
 }
 
+.preuves p{
+    text-align: center;
+    font-size: 1.2rem;
+    color: rgb(97, 97, 97);
+    margin-top: 0.5rem;
+    border-bottom: 1px solid rgb(97, 97, 97);
+    margin-bottom: 0;
+}
+
 .description{
-    width: 34vw;
+    width: 24vw;
     font-size: 1.5rem;
     background-color: rgb(247, 232, 213);
     border-radius: 10px;
     padding: 1.5rem;
     text-align: justify;
-    min-height: fit-content;
-    max-height: fit-content;
+    max-height: min-content;
+    height: min-content;
 }
 
 .contenu{
     display: flex;
+    justify-content: space-evenly;
 }
 
 .right{

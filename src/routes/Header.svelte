@@ -1,14 +1,14 @@
 <script>
 	import { page } from '$app/stores';
-	import logo from '$lib/images/svelte-logo.svg';
+	// import logo from '$lib/images/svelte-logo.svg';
 	import github from '$lib/images/github.svg';
 </script>
 
 <header>
 	<div class="corner">
-		<a href="https://kit.svelte.dev">
+		<!-- <a href="https://kit.svelte.dev">
 			<img src={logo} alt="SvelteKit" />
-		</a>
+		</a> -->
 	</div>
 
 	<nav>
@@ -20,10 +20,10 @@
 				<a href="/">Accueil</a>
 			</li>
 			<li aria-current={$page.url.pathname === '/skillOne' ? 'page' : undefined}>
-				<a href="/skillOne">Compétence 1.2</a>
+				<a href="/skillOne">Compétence 1.3</a>
 			</li>
 			<li aria-current={$page.url.pathname.startsWith('/skillTwo') ? 'page' : undefined}>
-				<a href="/skillTwo">Compétence 4.1</a>
+				<a href="/skillTwo">Compétence 6.3</a>
 			</li>
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
@@ -32,7 +32,7 @@
 	</nav>
 
 	<div class="corner">
-		<a href="https://github.com/sveltejs/kit">
+		<a href="https://github.com/Higorami">
 			<img src={github} alt="GitHub" />
 		</a>
 	</div>
@@ -42,6 +42,9 @@
 	header {
 		display: flex;
 		justify-content: space-between;
+		position: sticky;
+		top: 0;
+		z-index: 1000;
 	}
 
 	.corner {
@@ -66,7 +69,10 @@
 	nav {
 		display: flex;
 		justify-content: center;
-		--background: rgba(255, 255, 255, 0.7);
+		--background: rgba(255, 255, 255, 0.9);
+		position: sticky;
+		top: 0;
+		z-index: 1000;
 	}
 
 	svg {

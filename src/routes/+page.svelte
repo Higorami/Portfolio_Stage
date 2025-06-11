@@ -8,7 +8,7 @@
 		<span class="welcome">
 			<span>
 				<h1>Portfolio</h1>
-				<h2 style="color: rgb(97, 97, 97);">de stage</h2>
+				<h2 style="color: rgb(97, 97, 97);">troisième année de BUT informatique</h2>
 			</span>
 			<h1 style="color: rgb(255, 72, 0);">Fyléas QUAILE</h1>
 		</span>
