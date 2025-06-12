@@ -20,20 +20,23 @@
     }
 
         // Carousels Ac11
-        import imageAc11ARI from '$lib/images/ac11/controleurARI.png';
+        import imageAc11ARI from '$lib/images/ac61/creation_ggmap.png';
 
         let imagesAc61 = [
-            { src: imageAc11ARI, alt: 'Figure I - Contrôleur ARI'},
+            { src: imageAc11ARI, alt: 'Figure V - Code de la création de la carte Google Maps'},
         ];
 
         // Carousels Ac12
         import imageAc12StatsBefore from '$lib/images/ac12/stats_before.png';
         import imageAc12StatsAfter from '$lib/images/ac12/stats_after.png';
+        import imageAc12MapBefore from '$lib/images/ac63/map_before.png';
+        import imageAc12MapAfter from '$lib/images/ac63/map_after.png';
 
         let imagesAc63 = [
-            { src: imageAc11ARI, alt: 'Figure I - Contrôleur ARI'},
             { src: imageAc12StatsBefore, alt: 'Figure II - Statistiques avant amélioration'},
             { src: imageAc12StatsAfter, alt: 'Figure III - Statistiques après amélioration'},
+            { src: imageAc12MapBefore, alt: 'Figure VI - Carte avant mise à jour'},
+            { src: imageAc12MapAfter, alt: 'Figure VII - Carte après mise à jour'},
         ];
 
 </script>
@@ -56,11 +59,11 @@
     </div>
     <div class="onglet {btns[0] ? 'onglet-displayed' : 'onglet-not-displayed'}">
         <div class="sous-titre">
-            <h2>Choisir et implémenter les architectures adaptées</h2>
+            <h2>Organiser et partager une veille numérique</h2>
         </div>
         <div class="contenu">
             <span class="description left">
-                <p>L’application HORUS a été conçue dans le but d’aider les équipes départementales de pompiers dans leur quotidien. Pour cela elle leur permet de consulter de nombreuses informations de façon claire et concise pour les aider dans leurs prises de décisions, des statistiques et des prédictions par IA sont aussi disponible dans ce but, ainsi que de nombreux outils permettant de faciliter leur quotidien comme le contrôleur ARI (Appareil Respiratoire Isolant) apparaissant sur la figure I et permettant le suivi des pompiers au sein d’un bâtiment en feu.</p>
+                <p>Le frontend de l’application HORUS se base sur le framework TypeScript Angular, c’est un framework très robuste et grandement utilisé dans les applications de taille importante. Il n’est cependant pas étudié durant les cours et il a donc fallu que je l’apprenne de zéro, même si avoir étudié un autre framework javascript (Vue.js) durant les cours m’a quand même facilité le processus. De plus, le framework possédant des mises à jour de version et l’application souhaitant être fonctionnelle et stable le plus longtemps possible, il a fallu que j’effectue une certaine veille informatique afin de développer mon code avec les dernières bonnes pratiques d’Angular pour garantir sa validité dans le temps. J’ai également dû effectuer cette veille pour d’autres parties de l’application ce qui m'a amené à changer entièrement le code de la page (un extrait est visible sur la figure V) celui-ci étant uniquement sous la forme de balises auparavant, l’API avait effectivement subi un changement récent apportant de nombreuses modifications qui ont demandé un grand investissement dans la documentation afin de trouver des solutions pour garder les mêmes fonctionnalités. J’ai bien évidemment fait part de mes trouvailles à mon maître de stage pour qu’il puisse lui aussi se maintenir à niveau.</p>
             </span>
             <span class="preuves right">
                 {#each imagesAc61 as {src, alt}}
@@ -72,7 +75,7 @@
     </div>
     <div class="onglet {btns[1] ? 'onglet-displayed' : 'onglet-not-displayed'}">
         <div class="sous-titre">
-            <h2>Appliquer des principes d'accessibilité et d'ergonomie</h2>
+            <h2>Guider la conduite du changement informatique au sein d’une équipe informatique</h2>
         </div>
         <div class="contenu">
             <span class="preuves left">
@@ -82,7 +85,10 @@
                 {/each}
             </span>
             <span class="description right">
-                <p>L’application HORUS est en production et donc dans un état fonctionnel depuis 2022. Ayant rejoint le développement en 2025 j’ai été amené à faire évoluer une application existante. Dans ce cadre j’ai apporté trois types d’évolutions, l’ajout de fonctionnalités et la modification de fonctionnalités existantes que j’aborderai ensuite, ainsi que la correction de bugs diverses de manière plus succincte.</p>
+                <p>Au cours de mon stage et dans le cadre du projet HORUS, j’ai été amené à réaliser de nombreuses tâches diverses et variées, celles-ci étaient plus ou moins réalisables et dans un état de conception plus ou moins avancé. J’ai donc eu l’occasion de parfois proposer et apporter des changements dans la direction qui m'était indiquée.</p>
+                <p>J’ai deux exemples qui illustrent ces changements, un premier avec une idée qui n’était pas encore claire de la tâche et que j’ai donc dû élaborer, et un deuxième avec une tâche qui a dû se confronter à une limitation technique et que j’ai donc dû modifier.</p>
+                <p>Le premier exemple est survenu lorsque j’ai reçu comme tâche la refonte de la page des statistiques. Celle-ci étant alors dans un état uniquement textuel (voir figure II), il a donc fallu que j’associe chaque donnée à un graphique adapté et que je crée le visuel de la page. J’ai pu faire mes propositions qui ont été adoptées et ainsi prendre la direction que je souhaitais (extrait de la page finale sur la figure III).</p>
+                <p>Le deuxième exemple est survenu lors de la mise à niveau de l’API Google Maps sur la page de la carte. J’avais pour objectif de retrouver un affichage identique à la version précédente avec la version mise à jour, cependant certains changements majeurs m’ont forcé à changer un minimum le visuel pour pallier des limitations techniques. La solution que j’ai proposée a été acceptée et le visuel a donc été légèrement changé (voir figures VI et VII).</p>
             </span>
         </div>
     </div>
@@ -136,19 +142,19 @@
     width: 15rem;
     height: 3rem;
     background-color: rgb(68, 67, 67);
-    color: orange;
-    border: 2px solid goldenrod;
+    color: #d3d3d3;
+    border: 2px solid #660708;
 }
 
 .btn-sous-nav:hover {
     background-color: grey;
-    color: gold;
+    color: #ba181b;
     transition: 0.2s;
 }
 
 .btn-sous-nav-clicked{
     background-color: rgba(128, 128, 128, 0.8);
-    color: gold;
+    color: #a4161a;
     border-bottom: none;
 }
 
@@ -189,7 +195,7 @@
 .sous-titre h2{
     margin: auto;
     font-size: 3em;
-    color: orange;
+    color: #660708;
     text-align: center;
     width: 100%;
     padding: 1rem;

@@ -71,9 +71,9 @@
         </div>
         <div class="contenu">
             <span class="description left">
-                <p>L’application HORUS a été conçue dans le but d’aider les équipes départementales de pompiers dans leur quotidien. Pour cela elle leur permet de consulter de nombreuses informations de façon claire et concise pour les aider dans leurs prises de décisions, des statistiques et des prédictions par IA sont aussi disponible dans ce but, ainsi que de nombreux outils permettant de faciliter leur quotidien comme le contrôleur ARI (Appareil Respiratoire Isolant) apparaissant sur la figure I et permettant le suivi des pompiers au sein d’un bâtiment en feu.</p>
+                <p>L’application HORUS a été conçue dans le but d’aider les équipes départementales de pompiers dans leur quotidien. Pour cela elle leur permet de consulter de nombreuses informations de façon claire et concise pour les aider dans leurs prises de décisions, des statistiques et des prédictions par IA sont aussi disponibles dans ce but, ainsi que de nombreux outils permettant de faciliter leur quotidien comme le contrôleur ARI (Appareil Respiratoire Isolant) apparaissant sur la figure I et permettant le suivi des pompiers au sein d’un bâtiment en feu.</p>
                 <p>Comme vous pouvez l'imaginer, les pompiers utilisent donc cette application sur divers supports, que ce soit sur un ordinateur dans leurs bureaux, sur un téléphone lors des interventions ou sur une tablette pour le contrôleur ARI. J’ai donc dû adapter chacun de mes ajouts à leur usage majoritaire tout en m’assurant qu’ils fonctionnaient sur tous les supports possibles.</p>
-                <p>Dans ce but il à donc fallu que j’adapte le style de l’application via une variable vérifiant le support de l’utilisateur, mais également que je m’adapte au navigateur de celui-ci. Ceux-ci ne disposant pas toujours des mêmes fonctionnalités, il a fallu que j’adapte parfois mes implémentations en conséquence comme lors du développement de la fonctionnalité de capture d’écran qui ne fonctionnait mal avec les navigateurs Firefox et Safari.</p>
+                <p>Dans ce but, il a donc fallu que j’adapte le style de l’application via une variable vérifiant le support de l’utilisateur, mais également que je m’adapte au navigateur de celui-ci. Ceux-ci ne disposant pas toujours des mêmes fonctionnalités, il a fallu que j’adapte parfois mes implémentations en conséquence comme lors du développement de la fonctionnalité de capture d’écran qui ne fonctionnait mal avec les navigateurs Firefox et Safari.</p>
             </span>
             <span class="preuves right">
                 {#each imagesAc41 as {src, alt}}
@@ -95,9 +95,9 @@
                 {/each}
             </span>
             <span class="description right">
-                <p>L’application HORUS est en production et donc dans un état fonctionnel depuis 2022. Ayant rejoint le développement en 2025 j’ai été amené à faire évoluer une application existante. Dans ce cadre j’ai apporté trois types d’évolutions, l’ajout de fonctionnalités et la modification de fonctionnalités existantes que j’aborderai ensuite, ainsi que la correction de bugs diverses de manière plus succincte.</p>
-                <p>Pour la partie sur l’ajout d’une fonctionnalité je vais prendre la page du contrôleur ARI comme exemple, celle-ci est visible sur la figure I. Pour la réalisation de cette page je suis passé par deux étapes. Tout d’abord pour la partie conception j’ai commencé par récolter le besoin utilisateur. Une fois toutes les informations essentielles récupérées j’ai pu dessiner une maquette sur papier en m’inspirant de solutions existantes. Après validation de mon maître de stage j’ai commencé l’implémentation, pour ce faire j’ai commencé par un placement rapide des éléments majeurs puis par la création de toute la logique. J’ai pu ajouter un compteur, un calcul de l’heure de sortie, un calcul de l’oxygène restant en fonction des paramètres de l’utilisateur, etc…. Pour les finitions du style de la page j’ai dû veiller à respecter l’esthétique globale de l’application déjà existante.</p>
-                <p>Pour la partie sur l’amélioration d’une fonctionnalité déjà existante j’ai choisi comme exemple la page des statistiques. Avant mes modifications les informations étaient simplement affichées de manière textuelle (voir figure II). Il à donc fallu que j’adapte chacune des données sous forme du graphique le plus adapté afin que l’utilisateur puisse les comprendre de la manière la plus intuitive et rapide possible à l’aide le la bibliothèque AGCharts. J’ai donc dû apprendre cette bibliothèque avant de pouvoir implémenter chaque graphique avec les données associées (voir figure III).</p>
+                <p>L’application HORUS est en production et donc dans un état fonctionnel depuis 2022. Ayant rejoint le développement en 2025, j’ai été amené à faire évoluer une application existante. Dans ce cadre j’ai apporté trois types d’évolutions, l’ajout de fonctionnalités et la modification de fonctionnalités existantes que j’aborderai ensuite, ainsi que la correction de bugs divers de manière plus succincte.</p>
+                <p>Pour la partie sur l’ajout d’une fonctionnalité, je vais prendre la page du contrôleur ARI comme exemple, celle-ci est visible sur la figure I. Pour la réalisation de cette page je suis passé par deux étapes. Tout d’abord pour la partie conception j’ai commencé par récolter le besoin utilisateur. Une fois toutes les informations essentielles récupérées j’ai pu dessiner une maquette sur papier en m’inspirant de solutions existantes. Après validation de mon maître de stage j’ai commencé l’implémentation. Pour ce faire, j’ai commencé par un placement rapide des éléments majeurs puis par la création de toute la logique. J’ai pu ajouter un compteur, un calcul de l’heure de sortie, un calcul de l’oxygène restant en fonction des paramètres de l’utilisateur, etc. Pour les finitions du style de la page j’ai dû veiller à respecter l’esthétique globale de l’application déjà existante.</p>
+                <p>Pour la partie sur l’amélioration d’une fonctionnalité déjà existante j’ai choisi comme exemple la page des statistiques. Avant mes modifications les informations étaient simplement affichées de manière textuelle (voir figure II). Il a donc fallu que j’adapte chacune des données sous forme du graphique le plus adapté afin que l’utilisateur puisse les comprendre de la manière la plus intuitive et rapide possible à l’aide de la bibliothèque AGCharts. J’ai donc dû apprendre cette bibliothèque avant de pouvoir implémenter chaque graphique avec les données associées (voir figure III).</p>
             </span>
         </div>
     </div>
@@ -108,7 +108,7 @@
         <div class="contenu">
             <span class="description left">
                 <p>L’application HORUS étant déjà en production, il était nécessaire de prendre toutes les précautions avant de faire le moindre changement pour éviter d’impacter les utilisateurs. Dans cette optique, j'ai donc dû suivre une procédure rigoureuse lors de mon travail.</p>
-                <p>Cette procédure commençait par le travail personnel normal d’un développeur consistant à mener des tests sur les ajouts que j’apportais au code. Le reste de cette procédure se faisait en concordance avec le cycle du projet dont le diagramme est visible sur la figure IV. À chaque nouvelle nouvelle fonctionnalité je commençais par créer une nouvelle branche sur le repository github du projet, avec des commit régulier pour éviter les pertes, je travaillais uniquement sur cette branche jusqu’à ce que la fonctionnalité soit entièrement finie. À ce moment-là je lançais une pull request, une fois mon code revu par mon maître de stage, ma branche était fusionnée à la branche principale du projet. Tout le développement se passe sur le serveur de développement qui est différencié du serveur de production. Après quelques tests et lorsque le serveur de développement est stabilisé, le code de celui-ci est envoyé vers le serveur de production pour le mettre à jour.</p>
+                <p>Cette procédure commençait par le travail personnel normal d’un développeur consistant à mener des tests sur les ajouts que j’apportais au code. Le reste de cette procédure se faisait en concordance avec le cycle du projet dont le diagramme est visible sur la figure IV. À chaque nouvelle nouvelle fonctionnalité, je commençais par créer une nouvelle branche sur le dépôt github du projet, avec des commits réguliers pour éviter les pertes. Je travaillais uniquement sur cette branche jusqu’à ce que la fonctionnalité soit entièrement finie. À ce moment-là je lançais une pull request. Une fois mon code revu par mon maître de stage, ma branche était fusionnée à la branche principale du projet. Tout le développement se passe sur le serveur de développement qui est différencié du serveur de production. Après quelques tests et lorsque le serveur de développement est stabilisé, le code de celui-ci est envoyé vers le serveur de production pour le mettre à jour.</p>
             </span>
             <span class="preuves right">
                 {#each imagesAc13 as {src, alt}}
@@ -168,19 +168,19 @@
     width: 15rem;
     height: 3rem;
     background-color: rgb(68, 67, 67);
-    color: orange;
-    border: 2px solid goldenrod;
+    color: #d3d3d3;
+    border: 2px solid #660708;
 }
 
 .btn-sous-nav:hover {
     background-color: grey;
-    color: gold;
+    color: #ba181b;
     transition: 0.2s;
 }
 
 .btn-sous-nav-clicked{
     background-color: rgba(128, 128, 128, 0.8);
-    color: gold;
+    color: #a4161a;
     border-bottom: none;
 }
 
@@ -221,7 +221,7 @@
 .sous-titre h2{
     margin: auto;
     font-size: 3em;
-    color: orange;
+    color: #660708;
     text-align: center;
     width: 100%;
     padding: 1rem;
